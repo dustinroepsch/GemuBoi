@@ -1,1 +1,12 @@
 .vscode/
+
+#CMake Files
+
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+Build Files
+
+GemuBoi
