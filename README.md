@@ -1,6 +1,6 @@
-GemuBoi
+Gēmu Bōi (GemuBoi)
 ========
-A gameboy emulator in c++ using SFML for graphics and input.
+GemuBoi is a gameboy (DMG) emulator in c++ using SFML for graphics and input.
 
 Building
 ----------
