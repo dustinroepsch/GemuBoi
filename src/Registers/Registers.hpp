@@ -6,8 +6,17 @@
 class Registers
 {
 public:
-  Registers();
-  void reset();
+  Registers()
+  {
+    reset();
+  }
+
+  inline void reset()
+  {
+    a = f = b = c = d = e = h = l = 0;
+    sp = 0;
+    pc = 0x100; //cartridge starts here
+  }
 
   /* 8bit Setters  */
   inline void setA(uint8_t data) { a = data; };
@@ -74,27 +83,33 @@ public:
   inline uint8_t getL() { return l; };
 
   /* 16 bit Getters */
-  inline uint16_t getAF() {
+  inline uint16_t getAF()
+  {
     return makeWord(a, f);
   }
 
-  inline uint16_t getBC() {
+  inline uint16_t getBC()
+  {
     return makeWord(b, c);
   }
 
-  inline uint16_t getDE() {
+  inline uint16_t getDE()
+  {
     return makeWord(e, h);
   }
 
-  inline uint16_t getHL() {
+  inline uint16_t getHL()
+  {
     return makeWord(h, l);
   }
 
-  inline uint16_t getSP() {
+  inline uint16_t getSP()
+  {
     return sp;
   }
 
-  inline uint16_t getPC() {
+  inline uint16_t getPC()
+  {
     return pc;
   }
 
