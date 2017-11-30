@@ -66,51 +66,56 @@ public:
 
   /* 8bit Getters */
 
-  inline uint8_t getA() { return a; };
+  inline uint8_t getA() const { return a; };
 
-  inline uint8_t getF() { return f; };
+  inline uint8_t getF() const { return f; };
 
-  inline uint8_t getB() { return b; };
+  inline uint8_t getB() const { return b; };
 
-  inline uint8_t getC() { return c; };
+  inline uint8_t getC() const { return c; }
 
-  inline uint8_t getD() { return d; };
+  inline uint8_t getD() const { return d; }
 
-  inline uint8_t getE() { return e; };
+  inline uint8_t getE() const { return e; }
 
-  inline uint8_t getH() { return h; };
+  inline uint8_t getH() const { return h; }
 
-  inline uint8_t getL() { return l; };
+  inline uint8_t getL() const { return l; }
 
   /* 16 bit Getters */
-  inline uint16_t getAF()
+  inline uint16_t getAF() const
   {
     return makeWord(a, f);
   }
 
-  inline uint16_t getBC()
+  inline uint16_t getBC() const
   {
     return makeWord(b, c);
   }
 
-  inline uint16_t getDE()
+  inline uint16_t getDE() const
   {
     return makeWord(e, h);
   }
 
-  inline uint16_t getHL()
+  inline uint16_t getHL() const
   {
     return makeWord(h, l);
   }
 
-  inline uint16_t getSP()
+  inline uint16_t getSP() const
   {
     return sp;
   }
 
-  inline uint16_t getPC()
+  inline uint16_t getPC() const
   {
     return pc;
+  }
+
+  inline void incPC(uint32_t offset)
+  {
+    pc = pc + offset;
   }
 
 private:
